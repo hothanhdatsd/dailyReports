@@ -19,4 +19,4 @@ git fork : tạo ra 1 bản sao của repo để thực hiện các chức năng
 git stash : tạo ra một kho lưu trữ tạm thời giúp không cần phải commit khi muốn đổi sang nhánh khác
 git config : thiết lập username và email
 git clone : copy 1 repository về local
-tét tét 3
+dev0
