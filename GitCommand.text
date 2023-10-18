@@ -3,6 +3,7 @@ git add : thêm các tập tin vào kho chuẩn bị để commit
 git commit : lưu vào kho lưu trữ của git
 - m : thêm tùy chọn nội dung
 git push : đấy các file từ local lên trên repository
+- u : up-stream : tạo nhánh mới nếu chưa có trên repo
 git status : cung cấp thông tin của các tệp tin và thư mục
 git log : hiển thị thông tin commit
 git branch : xem nhánh và tạo nhánh mới
@@ -19,4 +20,4 @@ git fork : tạo ra 1 bản sao của repo để thực hiện các chức năng
 git stash : tạo ra một kho lưu trữ tạm thời giúp không cần phải commit khi muốn đổi sang nhánh khác
 git config : thiết lập username và email
 git clone : copy 1 repository về local
-dev1
+dev2
