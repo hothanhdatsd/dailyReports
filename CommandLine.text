@@ -110,5 +110,6 @@ Lệnh gpasswd: quản lí tt thành viên trong nhóm
 - a : thêm người dùng vào nhóm
 - A : chỉ định người dùng làm quản lí
 
-
+Lệnh xóa file : rm 
+Lệnh xóa thư mục : rm -r 
 
