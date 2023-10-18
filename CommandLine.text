@@ -1,0 +1,65 @@
+Lệnh ls:
+-a: Hiển thị cả các tệp ẩn.
+-l: Hiển thị thông tin chi tiết về tệp và thư mục.
+-h: Hiển thị kích thước dễ đọc (ví dụ: KB, MB).
+
+Lệnh cd:
+cd directory: Di chuyển đến thư mục directory.
+cd ..: Di chuyển lên một thư mục cha.
+Lệnh mkdir:
+-p: Tạo cả thư mục cha nếu chưa tồn tại.
+Lệnh cp:
+
+-r hoặc -R: Sao chép thư mục đệ quy.
+-i: Xác nhận trước khi ghi đè lên tệp.
+
+Lệnh mv:
+mv file1 file2: Đổi tên tệp từ file1 thành file2.
+-i: Xác nhận trước khi ghi đè.
+
+Lệnh rm:
+-r hoặc -R: Xoá thư mục và nội dung đệ quy.
+-f: Xoá mà không xác nhận.
+
+Lệnh grep:
+
+-i: Tìm kiếm không phân biệt chữ hoa và chữ thường.
+-r: Tìm kiếm đệ quy trong tất cả các tệp và thư mục con.
+
+Lệnh ps:
+-e: Hiển thị danh sách tiến trình.
+aux: Hiển thị tất cả tiến trình và thông tin chi tiết.
+
+Lệnh ssh:
+-p: Xác định cổng kết nối SSH.
+Lệnh tar:
+
+-cvzf: Nén thư mục thành tệp tar với gzip.
+-xvf: Giải nén tệp tar.
+
+Lệnh ifconfig:
+-a: Hiển thị tất cả các giao diện, bao gồm cả giao diện ẩn.
+
+Lệnh ping:
+-c: Xác định số gói tin để gửi.
+
+Lệnh wget:
+-O: Đặt tên cho tệp tải về.
+
+Lệnh sed:
+-i: Thay đổi trực tiếp trên tệp gốc.
+-e: Thêm biểu thức chính quy.
+
+Lệnh awk:
+-F: Xác định ký tự phân cách trường.
+
+Lệnh find:
+-name: Tìm theo tên tệp hoặc thư mục.
+Lệnh psql (PostgreSQL CLI):
+
+-U: Xác định tên người dùng cơ sở dữ liệu.
+
+- uname
+- awk 
+- wc 
+- uniq
