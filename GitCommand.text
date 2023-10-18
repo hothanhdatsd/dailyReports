@@ -1,0 +1,17 @@
+git init : tạo kho lưu trữ 
+git add : thêm các tập tin vào kho chuẩn bị để commit
+git commit : lưu vào kho lưu trữ của git
+- m : thêm tùy chọn nội dung
+git push : đấy các file từ local lên trên repository
+git status : cung cấp thông tin của các tệp tin và thư mục
+git log : hiển thị thông tin commit
+git branch : xem nhánh và tạo nhánh mới
+git checkout : di chuyển đến nhánh mới 
+- b : tạo nhánh mới và di chuyển đến nhánh đó	
+git pull : kéo các file mới từ nhánh đó và merge vào nhánh cục bộ trên máy
+git diff : hiển thị sự khác biệt của file đó với phiên bản trước
+git reset : 
+git remote add : kết nối tới một repository mới
+git rebase :  chuyển tất cả commit trên nhánh hiện tại và đẩy lên  commit khác
+git merge : kết hợp các thay đổi của nhánh khác vào nhánh hiện tại
+
