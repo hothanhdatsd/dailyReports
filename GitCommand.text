@@ -10,10 +10,12 @@ git checkout : di chuyển đến nhánh mới
 - b : tạo nhánh mới và di chuyển đến nhánh đó	
 git pull : kéo các file mới từ nhánh đó và merge vào nhánh cục bộ trên máy
 git diff : hiển thị sự khác biệt của file đó với phiên bản trước
-git reset : 
+git reset : hủy commit 
 git remote add : kết nối tới một repository mới
 git rebase :  chuyển tất cả commit trên nhánh hiện tại và đẩy lên  commit khác
 git merge : kết hợp các thay đổi của nhánh khác vào nhánh hiện tại
-
-day la ban test 2
+git fork : tạo ra 1 bản sao của repo để thực hiện các chức năng mà không ảnh hưởng tới repo hiện tại
+git stash : tạo ra một kho lưu trữ tạm thời giúp không cần phải commit khi muốn đổi sang nhánh khác
+git config : thiết lập username và email
+git clone : copy 1 repository về local
 
