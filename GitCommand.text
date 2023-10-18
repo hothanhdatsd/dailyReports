@@ -15,5 +15,5 @@ git remote add : kết nối tới một repository mới
 git rebase :  chuyển tất cả commit trên nhánh hiện tại và đẩy lên  commit khác
 git merge : kết hợp các thay đổi của nhánh khác vào nhánh hiện tại
 
-hien tai la dang o dev phien ban 2
+day la ban test
 
