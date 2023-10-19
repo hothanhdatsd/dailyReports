@@ -14,11 +14,16 @@ git pull : kéo các file mới từ nhánh đó và merge vào nhánh cục b�
 git diff : hiển thị sự khác biệt của file đó với phiên bản trước
 git reset : hủy commit 
 git remote add : kết nối tới một repository mới
-git rebase :  chuyển tất cả commit trên nhánh hiện tại và đẩy lên  commit khác
+git rebase :  chuyển tất cả commit trên nhánh hiện tại và đẩy lên  commit khác	
 git merge : kết hợp các thay đổi của nhánh khác vào nhánh hiện tại
 git fork : tạo ra 1 bản sao của repo để thực hiện các chức năng mà không ảnh hưởng tới repo hiện tại
 git stash : tạo ra một kho lưu trữ tạm thời giúp không cần phải commit khi muốn đổi sang nhánh khác
 git config : thiết lập username và email
 git clone : copy 1 repository về local
-
+sự khác nhau giữa git merge và git rebase
+- merge tạo ra 1 commit có hai parent là nhánh muốn merge và nhánh được merge
+- rebase di chuyển tất cả các commit từ nhánh này và đặt lên trên nhánh mục tiêu không tạo ra thêm commit
+- rebase sẽ làm lịch sử commit thẳng hàng dễ theo dõi hơn 
+- merge sẽ dễ xem được thay đổi của nhánh cần merge
+Git cherry-pick : lấy một commit tại một nhánh và sáp nhập vào nhánh hiện tại.
 
