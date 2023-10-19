@@ -6,6 +6,7 @@
 	- In : tồn tại giá trị trong danh sách
 	- between : ở giữa 2 giá trị
 	- like : theo chuỗi
+- truncate : xóa bảng nhưng không xóa cấu trúc của bảng
 - create table .. (..) : tạo bảng với các cột
 - alter table ..  : thay đổi cấu trúc bảng
 - drop table .. : xóa bảng
@@ -58,6 +59,7 @@ FROM HighPricedProducts; :::: chia nhỏ bảng Products ra thành bảng nhỏ 
  
 - group by : nhóm các dữ liệu theo nhóm 
 - order by : sắp xếp dữ liệu truy vấn hiển thị
+
 - create index : giúp tăng hiệu suất khi truy vấn
 
 - 
