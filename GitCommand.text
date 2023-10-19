@@ -20,6 +20,8 @@ git fork : tạo ra 1 bản sao của repo để thực hiện các chức năng
 git stash : tạo ra một kho lưu trữ tạm thời giúp không cần phải commit khi muốn đổi sang nhánh khác
 git config : thiết lập username và email
 git clone : copy 1 repository về local
+git filter-branch : xóa file đã push trên local
+git push origin --force --all : xóa file đã push trên remote
 sự khác nhau giữa git merge và git rebase
 - merge tạo ra 1 commit có hai parent là nhánh muốn merge và nhánh được merge
 - rebase di chuyển tất cả các commit từ nhánh này và đặt lên trên nhánh mục tiêu không tạo ra thêm commit
