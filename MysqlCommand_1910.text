@@ -49,7 +49,7 @@ end; ::: Tạo môt function
 FROM Products; : giá trị của category theo điều kiện của price
 - LIMIT : giới hạn số dòng khi lấy 
 - select distinct : lấy các giá trị không trùng lặp
- - WITH HighPricedProducts AS (
+- WITH HighPricedProducts AS (
     SELECT ProductName, Price
     FROM Products
     WHERE Price > 1000
