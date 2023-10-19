@@ -7,6 +7,7 @@ git push : đấy các file từ local lên trên repository
 git status : cung cấp thông tin của các tệp tin và thư mục
 git log : hiển thị thông tin commit
 git branch : xem nhánh và tạo nhánh mới
+- m : đổi tên nhánh
 - d : xóa nhánh
 git checkout : di chuyển đến nhánh mới 
 - b : tạo nhánh mới và di chuyển đến nhánh đó	
