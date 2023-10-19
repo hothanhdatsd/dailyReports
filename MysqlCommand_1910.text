@@ -37,5 +37,5 @@ end; ::: Tạo môt function
 	- upper và lower : chữ hoa và chữ thường 
 	- Date : trích ngày từ dữ liệu
 	- Datediff : tính số ngày giữa 2 giá trị
-- LiKE : tìm các giá trị trong chuỗi phù hợp với điều kiện 
+- LiKE : tìm các giá trị trong chuỗi phù hợp với điều kiện.
 - 
