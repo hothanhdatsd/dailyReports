@@ -38,4 +38,26 @@ end; ::: Tạo môt function
 	- Date : trích ngày từ dữ liệu
 	- Datediff : tính số ngày giữa 2 giá trị
 - LiKE : tìm các giá trị trong chuỗi phù hợp với điều kiện.
+- SELECT
+    ProductName,
+    Price,
+    CASE
+        WHEN Price > 1000 THEN 'Đắt'
+        ELSE 'Rẻ'
+    END AS Category
+FROM Products; : giá trị của category theo điều kiện của price
+- LIMIT : giới hạn số dòng khi lấy 
+- select distinct : lấy các giá trị không trùng lặp
+ - WITH HighPricedProducts AS (
+    SELECT ProductName, Price
+    FROM Products
+    WHERE Price > 1000
+)
+SELECT ProductName, Price
+FROM HighPricedProducts; :::: chia nhỏ bảng Products ra thành bảng nhỏ để tiện truy vấn
+ 
+- group by : nhóm các dữ liệu theo nhóm 
+- order by : sắp xếp dữ liệu truy vấn hiển thị
+- create index : giúp tăng hiệu suất khi truy vấn
+
 - 
