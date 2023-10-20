@@ -1,3 +1,4 @@
+asdadasdddddddd
 sự khác nhau giữa git merge và git rebase
 - merge tạo ra 1 commit có hai parent là nhánh muốn merge và nhánh được merge
 - rebase di chuyển tất cả các commit từ nhánh này và đặt lên trên nhánh mục tiêu không tạo ra thêm commit
