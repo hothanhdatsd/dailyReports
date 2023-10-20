@@ -5,6 +5,6 @@ Các kiểu Join trong mysql
 - SELF JOIN : kết hợp bảng với chính nó để có thể truy xuất thông tin giữa các dòng trong bảng.
 - FULL JOIN : trả về tất cả giá trị ở cả hai bảng 
 
-- Sub-query là một truy vấn trong một truy vấn khác
+- Sub-query là một truy vấn con trong một truy vấn khác
 ví dụ : 
 Select * from orders where price > (select avg(price) from orders) : lấy tất cả thông tin của đơn hàng khi giá lớn hơn giá trung bình.
