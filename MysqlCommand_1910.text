@@ -9,7 +9,7 @@
 - truncate : xóa bảng nhưng không xóa cấu trúc của bảng
 - create table .. (..) : tạo bảng với các cột
 - alter table ..  : thay đổi cấu trúc bảng
-- drop table .. : xóa bảng
+- drop table .. : xóa bảngd
 - create database ..  : tạo database
 - select * from .. join .. 
 - select * from table1 (right join,join,left join) table on table1.column = table.column :  sử dụng lấy dữ liệu từ hai bảng tùy theo nhu cầu sử dụng
