@@ -16,15 +16,21 @@ negative?: Kiểm tra xem một số có phải là số âm hay không.
 abs: Trả về giá trị tuyệt đối của một số.
 next / succ: Tăng giá trị số lên 1.
 pred: Giảm giá trị số xuống 1.
+<=>: so sánh hai số 
 
 Xử Lý Chuỗi và Ký Tự
 downcase: Chuyển đổi chuỗi thành chữ thường.
 upcase: Chuyển đổi chuỗi thành chữ hoa.
+swapcase : đổi ngược lại hoa thường
+capitalize : in hoa ký tự đầu
+reverse : đảo ngược chuỗi
 length: Trả về độ dài của chuỗi hoặc mảng.
 include?: Kiểm tra xem một chuỗi có chứa một chuỗi con hoặc một phần tử trong mảng hay không.
 sub: thay đổi 1 từ còn gsub là thay đổi tất cả
 concat hoặc << : nối chuỗi
 length : đo độ dài
+empty hoặc nil : kiểm tra có rỗng hay nil không
+
 
 Làm tròn Số
 floor: Làm tròn xuống số nguyên gần nhất.
@@ -35,6 +41,9 @@ Chuyển Đổi Kiểu Dữ Liệu
 to_i: Chuyển đổi đối tượng thành số nguyên.
 to_f: Chuyển đổi đối tượng thành số thực (float).
 to_s: Chuyển đổi đối tượng thành chuỗi (string).
+to_a: chuyển đổi sang mảng
+to_h: chuyển đổi sang hash
+
 
 Xử Lý Số Liên Quan Đến Khoảng Cách và Vị Trí
 between?: Kiểm tra xem một giá trị có nằm trong một khoảng cho trước hay không.
@@ -48,6 +57,10 @@ Vòng Lặp
 8.upto {} hoặc 8.upto do ... end: Dùng để tạo số vòng lặp đến value
 8.downto {} hoặc 8.downto do ... end: Dùng để tạo số vòng lặp đến value
 1.step {} hoặc 1.step(100,5) do ... end : dùng để vòng lặp
+while...end : vòng lặp while
+until...end : vòng lặp until
+loop do end : lặp đến khi nào gặp điều kiện break
+
 đại diện kiểu dữ liệu : CLASS
 class: Lấy tên của lớp (class) mà một đối tượng thuộc về.
 
@@ -73,8 +86,10 @@ delete(value) : xóa tất cả phần tử có value giống
 compact : loại bỏ các phần tử có giá trị nil
 uniq : loại bỏ các phần tử trùng lặp
 each : thực hiện vòng lặp qua mảng
+each_with_index : thực hiện vòng lặp có giá trị index
 reverse_each: thực hiện vòng lặp ngược
 map : tạo một mảng mới chưa các phép biến đổi
+collect : tạo một mảng mới chưa các phép biến đổi
 select và reject,drop_while : lấy hoặc bỏ tùy theo giá trị 
 delete_ìf và keep_ìf : xóa bỏ hoặc giữ lại tùy theo giá tri
 bsearch : trả về phần tử đầu tiên phù hợp với điều kiện
@@ -92,6 +107,7 @@ sort : sắp xếp phần tử trong mảng
 join : nối các phần tử trong mảng
 flatten : làm phẳng các phần tử trong mảng
 value_at : lấy giá trị tại các index
+<< : thêm giá trị vào mảng
 
 - Điều kiện
  ìf eleif else end
@@ -100,3 +116,9 @@ value_at : lấy giá trị tại các index
  ||= : nếu là nil thì gán giá trị mới :::: value = nil , value ||= 10
 
 
+-Range 
+1..5 : tạo dãy số 1.2.3.4.5
+1...5 : tạo dãy số 1.2.3.4
+
+-patrition 
+chia mảng thành 2 mảng con phù hợp với điều kiện
