@@ -107,7 +107,8 @@ sort : sắp xếp phần tử trong mảng
 join : nối các phần tử trong mảng
 flatten : làm phẳng các phần tử trong mảng
 value_at : lấy giá trị tại các index
-<< : thêm giá trị vào mảng
+<< : thêm giá trị vào mảng\
+any hoặc all : có một hoặc tất cả các giá trị phù hợp
 
 - Điều kiện
  ìf eleif else end
