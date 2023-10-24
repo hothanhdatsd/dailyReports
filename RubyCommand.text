@@ -168,6 +168,7 @@ def console
 yield ("boris")
 end
 
+
 console{|name| puts "#{name} is so handsome"} =>>>> boris is so handsome
 
 
