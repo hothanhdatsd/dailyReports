@@ -1,125 +1,144 @@
-In và Hiển Thị
+### In và Hiển Thị
+- `puts`: Dùng để in kết quả ra màn hình và sau đó xuống dòng.
+- `p`: In ra giá trị của một đối tượng, bao gồm cả thông tin debug, nhưng không tự động xuống dòng.
+- `print`: In ra giá trị mà không tự động xuống dòng.
 
-puts: Dùng để in kết quả ra màn hình và sau đó xuống dòng.
-p: In ra giá trị của một đối tượng, bao gồm cả thông tin debug, nhưng không tự động xuống dòng.
-print: In ra giá trị mà không tự động xuống dòng.
+### Đọc Dữ Liệu Đầu Vào
+- `gets`: Đọc dữ liệu từ bàn phím.
+- `gets.chomp`: Đọc dữ liệu từ bàn phím và loại bỏ ký tự xuống dòng.
 
-Đọc Dữ Liệu Đầu Vào
-4. gets: Đọc dữ liệu từ bàn phím.
-5. gets.chomp: Đọc dữ liệu từ bàn phím và loại bỏ ký tự xuống dòng.
+### Xử Lý Số
+- `odd?`: Kiểm tra xem một số có phải là số lẻ hay không.
+- `even?`: Kiểm tra xem một số có phải là số chẵn hay không.
+- `positive?`: Kiểm tra xem một số có phải là số dương hay không.
+- `negative?`: Kiểm tra xem một số có phải là số âm hay không.
+- `abs`: Trả về giá trị tuyệt đối của một số.
+- `next` / `succ`: Tăng giá trị số lên 1.
+- `pred`: Giảm giá trị số xuống 1.
+- `<=>`: So sánh hai số.
 
-Xử Lý Số
-odd?: Kiểm tra xem một số có phải là số lẻ hay không.
-even?: Kiểm tra xem một số có phải là số chẵn hay không.
-positive?: Kiểm tra xem một số có phải là số dương hay không.
-negative?: Kiểm tra xem một số có phải là số âm hay không.
-abs: Trả về giá trị tuyệt đối của một số.
-next / succ: Tăng giá trị số lên 1.
-pred: Giảm giá trị số xuống 1.
-<=>: so sánh hai số 
+### Xử Lý Chuỗi và Ký Tự
+- `downcase`: Chuyển đổi chuỗi thành chữ thường.
+- `upcase`: Chuyển đổi chuỗi thành chữ hoa.
+- `swapcase`: Đổi ngược lại giữa chữ hoa và chữ thường.
+- `capitalize`: In hoa ký tự đầu.
+- `reverse`: Đảo ngược chuỗi.
+- `length`: Trả về độ dài của chuỗi hoặc mảng.
+- `include?`: Kiểm tra xem một chuỗi có chứa một chuỗi con hoặc một phần tử trong mảng hay không.
+- `sub`: Thay đổi 1 từ còn `gsub` thay đổi tất cả.
+- `concat` hoặc `<<`: Nối chuỗi.
+- `length`: Đo độ dài.
+- `empty` hoặc `nil`: Kiểm tra có rỗng hay `nil` không.
 
-Xử Lý Chuỗi và Ký Tự
-downcase: Chuyển đổi chuỗi thành chữ thường.
-upcase: Chuyển đổi chuỗi thành chữ hoa.
-swapcase : đổi ngược lại hoa thường
-capitalize : in hoa ký tự đầu
-reverse : đảo ngược chuỗi
-length: Trả về độ dài của chuỗi hoặc mảng.
-include?: Kiểm tra xem một chuỗi có chứa một chuỗi con hoặc một phần tử trong mảng hay không.
-sub: thay đổi 1 từ còn gsub là thay đổi tất cả
-concat hoặc << : nối chuỗi
-length : đo độ dài
-empty hoặc nil : kiểm tra có rỗng hay nil không
+### Làm tròn Số
+- `floor`: Làm tròn xuống số nguyên gần nhất.
+- `ceil`: Làm tròn lên số nguyên gần nhất.
+- `round`: Làm tròn giá trị số thực.
 
+### Chuyển Đổi Kiểu Dữ Liệu
+- `to_i`: Chuyển đổi đối tượng thành số nguyên.
+- `to_f`: Chuyển đổi đối tượng thành số thực (float).
+- `to_s`: Chuyển đổi đối tượng thành chuỗi (string).
+- `to_a`: Chuyển đổi thành mảng.
+- `to_h`: Chuyển đổi sang hash.
 
-Làm tròn Số
-floor: Làm tròn xuống số nguyên gần nhất.
-ceil: Làm tròn lên số nguyên gần nhất.
-round: Làm tròn giá trị số thực.
+### Xử Lý Số Liên Quan Đến Khoảng Cách và Vị Trí
+- `between?`: Kiểm tra xem một giá trị có nằm trong một khoảng cho trước hay không.
 
-Chuyển Đổi Kiểu Dữ Liệu
-to_i: Chuyển đổi đối tượng thành số nguyên.
-to_f: Chuyển đổi đối tượng thành số thực (float).
-to_s: Chuyển đổi đối tượng thành chuỗi (string).
-to_a: chuyển đổi sang mảng
-to_h: chuyển đổi sang hash
+### Loại Dữ Liệu Null
+- `nil`: Đại diện cho không có giá trị hoặc không tồn tại.
 
+### Vòng Lặp
+- `times`: Lặp một đoạn mã một số lần.
+- `upto`: Lặp từ số hiện tại đến số kết thúc.
+- `downto`: Lặp từ số hiện tại đến số kết thúc.
+- `step`: Lặp với bước nhất định.
+- `while`: Vòng lặp `while`.
+- `until`: Vòng lặp `until`.
+- `loop`: Lặp đến khi nào gặp điều kiện `break`.
 
-Xử Lý Số Liên Quan Đến Khoảng Cách và Vị Trí
-between?: Kiểm tra xem một giá trị có nằm trong một khoảng cho trước hay không.
+### Đại diện kiểu dữ liệu: CLASS
+- `class`: Lấy tên của lớp (class) mà một đối tượng thuộc về.
 
+### Array (Mảng)
+- `new`: Tạo mảng mới.
+- `at`: Tìm vị trí của giá trị.
+- `fetch(index, ngoại lệ)`: Tìm giá trị tại index nếu không có thì in ra ngoại lệ.
+- `first`, `last`: Lấy giá trị đầu và cuối.
+- `take`: Lấy số phần tử theo giá trị.
+- `drop`: Xóa bỏ số phần tử theo giá trị.
+- `length`: Độ dài.
+- `count`: Số lượng phần tử.
+- `empty?`: Kiểm tra có rỗng hay không (trả về boolean).
+- `include?`: Kiểm tra có chứa phần tử cần tìm hay không (trả về boolean).
+- `push`: Thêm phần tử vào cuối mảng.
+- `unshift`: Thêm phần tử vào đầu mảng.
+- `insert(index, value)`: Thêm value vào vị trí index.
+- `pop`: Xóa phần tử cuối của mảng.
+- `shift`: Xóa phần tử đầu mảng.
+- `delete_at(index)`: Xóa phần tử tại index.
+- `delete(value)`: Xóa tất cả phần tử có giá trị giống.
+- `compact`: Loại bỏ các phần tử có giá trị nil.
+- `uniq`: Loại bỏ các phần tử trùng lặp.
+- `each`: Thực hiện vòng lặp qua mảng.
+- `each_with_index`: Thực hiện vòng lặp có giá trị index.
+- `reverse_each`: Thực hiện vòng lặp ngược.
+- `map` và `collect`: Tạo một mảng mới chứa kết quả biến đổi.
+- `select` và `reject`: Lấy hoặc bỏ tùy theo giá trị.
+- `delete_if` và `keep_if`: Xóa bỏ hoặc giữ lại tùy theo giá trị.
+- `bsearch`: Trả về phần tử đầu tiên phù hợp với điều kiện.
+- `clear`: Dọn sạch mảng.
+- `collect(value)`: Kết hợp giá trị của mảng với value.
+- `combination(value)`: Tạo các tổ hợp mảng hoặc danh sách tùy theo value.
+- `concat`: Nối mảng.
+- `cycle(value)`: Lặp theo value hoặc vô hạn.
+- `fill`: Thay đổi các giá trị trong mảng.
+- `rindex`: In ra giá trị index của phần tử cuối cùng.
+- `sample`: Lấy ngẫu nhiên các phần tử.
+- `shuffle`: Làm xáo trộn mảng.
+- `slice`: Lấy các phần tử của mảng.
+- `sort`: Sắp xếp phần tử trong mảng.
+- `join`: Nối các phần tử trong mảng.
+- `flatten`: Làm phẳng các phần tử trong mảng.
+- `value_at`: Lấy giá trị tại các index.
+- `<<`: Thêm giá trị vào mảng.
+- `any` hoặc `all`, `none`: Có một hoặc tất cả các giá trị phù hợp hoặc không có giá trị nào phù hợp.
+- `find` hoặc `detect`: Tìm phần tử đầu tiên phù hợp với điều kiện.
+- `partition`: Chia mảng thành 2 mảng con phù hợp với điều kiện.
 
-Loại Dữ Liệu Null
-nil: Đại diện cho không có giá trị hoặc không tồn tại.
+### String (Chuỗi)
+- `upcase`, `downcase`, và `capitalize`: Chuyển đổi kiểu chữ (hoa, thường, ghi hoa kí tự đầu).
+- `swapcase`: Đổi ngược lại giữa chữ hoa và chữ thường.
+- `split`: Chia chuỗi thành mảng chứa các phần tử.
+- `each` và `each_char`: Vòng lặp trên từng ký tự của chuỗi.
+- `<<`, `+`, và `concat`: Nối chuỗi.
+- `count`: Đếm số lần xuất hiện của ký tự trong chuỗi.
+- `squeeze`: Loại bỏ ký tự lặp lại.
+- `index` và `rindex`: Tìm vị trí đầu tiên và cuối cùng của ký tự.
+- `delete`: Xóa ký tự trong chuỗi.
+- `empty`: Kiểm tra rỗng.
+- `strip`: Loại bỏ khoảng trống ở đầu và cuối chuỗi.
+- `sub` và `gsub`: Thay thế 1 ký tự và tất cả.
+- `include?`: Kiểm tra có chứa ký tự hay không.
+- `casecmp`: So sánh chuỗi không phân biệt hoa thường.
+- `start_with` và `end_with`: Kiểm tra xem chuỗi bắt đầu và kết thúc bằng các giá trị.
+- `slice`: Trích xuất chuỗi.
+- `insert`: Thêm giá trị vào chuỗi.
+- `reverse`: Đảo ngược chuỗi.
+- `partition`: Chia chuỗi thành các phần phù hợp.
+- `replace`: Thay thế chuỗi bằng đoạn chuỗi mới.
+- `clear`: Làm rỗng chuỗi.
 
-Vòng Lặp
-8.times {} hoặc 8.times do ... end: Dùng để tạo một vòng lặp lặp lại một đoạn mã 8 lần.
-8.upto {} hoặc 8.upto do ... end: Dùng để tạo số vòng lặp đến value
-8.downto {} hoặc 8.downto do ... end: Dùng để tạo số vòng lặp đến value
-1.step {} hoặc 1.step(100,5) do ... end : dùng để vòng lặp
-while...end : vòng lặp while
-until...end : vòng lặp until
-loop do end : lặp đến khi nào gặp điều kiện break
+### Điều Kiện
+- `if`, `elsif`, `else`, `end`.
+- `case`, `when`, `end`.
+- `unless`, `end`.
+- `||=`: Gán giá trị mới nếu là `nil`.
 
-đại diện kiểu dữ liệu : CLASS
-class: Lấy tên của lớp (class) mà một đối tượng thuộc về.
+### Range (Khoảng)
+- `1..5`: Tạo dãy số 1, 2, 3, 4, 5.
+- `1...5`: Tạo dãy số 1, 2, 3, 4.
 
+### Hàm
+- `def method_name(parameter)`: Định nghĩa hàm với tham số.
 
-- Array : 
-new : tạo mảng mới
-at : tìm vị trí của giá trị
-fetch(index,ngoại lệ) :  tìm tại giá trị index nếu không có thì in ra ngoại lệ
-first,last : lấy giá trị đầu và cuối
-take : lấy số phần tử theo giá trị
-drop : xóa bỏ số phần tử theo giá trị
-length : độ dài
-count :số lượng phần tử
-empty? : có rỗng hay không ? boolean
-include? : có chứa phần tử cần tìm ? boolean
-push : thêm phần tử vào cuối mảng
-unshift : thêm phần tử vào đầu mảng
-insert (index,value) thêm value vào vị trí index
-pop : xóa phần tử cuối của mảng
-shift : xóa phần tử đầu mảng
-delete_at(index) : xóa phần tử tại index
-delete(value) : xóa tất cả phần tử có value giống
-compact : loại bỏ các phần tử có giá trị nil
-uniq : loại bỏ các phần tử trùng lặp
-each : thực hiện vòng lặp qua mảng
-each_with_index : thực hiện vòng lặp có giá trị index
-reverse_each: thực hiện vòng lặp ngược
-map : tạo một mảng mới chưa các phép biến đổi
-collect : tạo một mảng mới chưa các phép biến đổi
-select và reject,drop_while : lấy hoặc bỏ tùy theo giá trị 
-delete_ìf và keep_ìf : xóa bỏ hoặc giữ lại tùy theo giá tri
-bsearch : trả về phần tử đầu tiên phù hợp với điều kiện
-clear : dọn sạch mảng
-collect (value): kết hợp giá trị của mảng với value
-combinationn (value) : tạo các tổ hợp mảng hoặc danh sách tùy theo value
-concat : nối mảng
-cycle (value) : lặp theo value hoặc vô hạn
-fill : thay đổi các giá trị trong phần tử
-rindex : in ra giá trị index của phần tử cuối cùng
-sample : lấy ngẫu nhiên các phần tử
-shuffle : làm xáo trộn mảng
-slice : lấy các phần tử của mảng
-sort : sắp xếp phần tử trong mảng
-join : nối các phần tử trong mảng
-flatten : làm phẳng các phần tử trong mảng
-value_at : lấy giá trị tại các index
-<< : thêm giá trị vào mảng\
-any hoặc all : có một hoặc tất cả các giá trị phù hợp
-
-- Điều kiện
- ìf eleif else end
- case when end
- unless end
- ||= : nếu là nil thì gán giá trị mới :::: value = nil , value ||= 10
-
-
--Range 
-1..5 : tạo dãy số 1.2.3.4.5
-1...5 : tạo dãy số 1.2.3.4
-
--patrition 
-chia mảng thành 2 mảng con phù hợp với điều kiện
