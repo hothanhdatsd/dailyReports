@@ -17,18 +17,6 @@
 - `pred`: Giảm giá trị số xuống 1.
 - `<=>`: So sánh hai số.
 
-### Xử Lý Chuỗi và Ký Tự
-- `downcase`: Chuyển đổi chuỗi thành chữ thường.
-- `upcase`: Chuyển đổi chuỗi thành chữ hoa.
-- `swapcase`: Đổi ngược lại giữa chữ hoa và chữ thường.
-- `capitalize`: In hoa ký tự đầu.
-- `reverse`: Đảo ngược chuỗi.
-- `length`: Trả về độ dài của chuỗi hoặc mảng.
-- `include?`: Kiểm tra xem một chuỗi có chứa một chuỗi con hoặc một phần tử trong mảng hay không.
-- `sub`: Thay đổi 1 từ còn `gsub` thay đổi tất cả.
-- `concat` hoặc `<<`: Nối chuỗi.
-- `length`: Đo độ dài.
-- `empty` hoặc `nil`: Kiểm tra có rỗng hay `nil` không.
 
 ### Làm tròn Số
 - `floor`: Làm tròn xuống số nguyên gần nhất.
@@ -57,8 +45,6 @@
 - `until`: Vòng lặp `until`.
 - `loop`: Lặp đến khi nào gặp điều kiện `break`.
 
-### Đại diện kiểu dữ liệu: CLASS
-- `class`: Lấy tên của lớp (class) mà một đối tượng thuộc về.
 
 ### Array (Mảng)
 - `new`: Tạo mảng mới.
@@ -81,7 +67,7 @@
 - `compact`: Loại bỏ các phần tử có giá trị nil.
 - `uniq`: Loại bỏ các phần tử trùng lặp.
 - `each`: Thực hiện vòng lặp qua mảng.
-- `each_with_index`: Thực hiện vòng lặp có giá trị index.
+- `each_with_index(value,index)`: Thực hiện vòng lặp có giá trị index.
 - `reverse_each`: Thực hiện vòng lặp ngược.
 - `map` và `collect`: Tạo một mảng mới chứa kết quả biến đổi.
 - `select` và `reject`: Lấy hoặc bỏ tùy theo giá trị.
@@ -90,7 +76,26 @@
 - `clear`: Dọn sạch mảng.
 - `collect(value)`: Kết hợp giá trị của mảng với value.
 - `combination(value)`: Tạo các tổ hợp mảng hoặc danh sách tùy theo value.
+
+arr = [1, 2, 3, 4]                          
+combinations = arr.combination(2)
+
+combinations.each do |combo|
+  puts combo.inspect
+end
+
+[1, 2]
+[1, 3]
+[1, 4]
+[2, 3]
+[2, 4]
+[3, 4]
+
+
 - `concat`: Nối mảng.
+- `|` : nối 2 mảng không gây trùng lặp giá trị [1,2,3,4] | [3,4,5] = [1,2,3,4,5]
+- `-` : loại bỏ các phần tử : [1,1,2,3,4,5,6]-[2,3] =[1,4,5,6]
+- `&` : tìm các phần tử chung : [1,2,3,4] & [1,2,4] = [1,2,4]
 - `cycle(value)`: Lặp theo value hoặc vô hạn.
 - `fill`: Thay đổi các giá trị trong mảng.
 - `rindex`: In ra giá trị index của phần tử cuối cùng.
@@ -102,7 +107,7 @@
 - `flatten`: Làm phẳng các phần tử trong mảng.
 - `value_at`: Lấy giá trị tại các index.
 - `<<`: Thêm giá trị vào mảng.
-- `any` hoặc `all`, `none`: Có một hoặc tất cả các giá trị phù hợp hoặc không có giá trị nào phù hợp.
+- `any?` hoặc `all?`, `none`: Có một hoặc tất cả các giá trị phù hợp hoặc không có giá trị nào phù hợp.
 - `find` hoặc `detect`: Tìm phần tử đầu tiên phù hợp với điều kiện.
 - `partition`: Chia mảng thành 2 mảng con phù hợp với điều kiện.
 - `drop` : loại bỏ số phần tử
@@ -118,7 +123,7 @@
 - `squeeze`: Loại bỏ ký tự lặp lại.
 - `index` và `rindex`: Tìm vị trí đầu tiên và cuối cùng của ký tự.
 - `delete`: Xóa ký tự trong chuỗi.
-- `empty`: Kiểm tra rỗng.
+- `empty` hoặc `nil`: Kiểm tra có rỗng hay `nil` không.
 - `strip`: Loại bỏ khoảng trống ở đầu và cuối chuỗi.
 - `sub` và `gsub`: Thay thế 1 ký tự và tất cả.
 - `include?`: Kiểm tra có chứa ký tự hay không.
@@ -145,7 +150,6 @@
 - `merge` : kết hợp hai hash với nhau
 
 
-
 ### Điều Kiện
 - `if`, `elsif`, `else`, `end`.
 - `case`, `when`, `end`.
@@ -158,4 +162,12 @@
 
 ### Hàm
 - `def method_name(parameter)`: Định nghĩa hàm với tham số.
+- yield : 
+
+def console 
+yield ("boris")
+end
+
+console{|name| puts "#{name} is so handsome"} =>>>> boris is so handsome
+
 
