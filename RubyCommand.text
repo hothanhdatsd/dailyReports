@@ -105,6 +105,8 @@
 - `any` hoặc `all`, `none`: Có một hoặc tất cả các giá trị phù hợp hoặc không có giá trị nào phù hợp.
 - `find` hoặc `detect`: Tìm phần tử đầu tiên phù hợp với điều kiện.
 - `partition`: Chia mảng thành 2 mảng con phù hợp với điều kiện.
+- `drop` : loại bỏ số phần tử
+- `clone` và `dup` : tạo ra một bản sao 
 
 ### String (Chuỗi)
 - `upcase`, `downcase`, và `capitalize`: Chuyển đổi kiểu chữ (hoa, thường, ghi hoa kí tự đầu).
@@ -128,6 +130,21 @@
 - `partition`: Chia chuỗi thành các phần phù hợp.
 - `replace`: Thay thế chuỗi bằng đoạn chuỗi mới.
 - `clear`: Làm rỗng chuỗi.
+- `clone` và `dup` : tạo ra một bản sao 
+- `freeze` : đóng băng đối tượng không thế thao tác
+	
+	
+### Hash (key-value)	
+- `each_pair` : lặp qua từng cặp giá trị 
+- `each_key` : lặp qua theo từng khóa
+- `each_value` : lặp qua theo từng giá trị
+- `each` : lặp qua các giá trị key-value
+- `select` : trả về  giá trị phù hợp với điều kiện
+- `reject` : bỏ các phần tử phù hợp với điều kiện
+- `delete` : xóa bỏ key value 
+- `merge` : kết hợp hai hash với nhau
+
+
 
 ### Điều Kiện
 - `if`, `elsif`, `else`, `end`.
