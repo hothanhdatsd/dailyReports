@@ -76,6 +76,7 @@
 - `clear`: Dọn sạch mảng.
 - `collect(value)`: Kết hợp giá trị của mảng với value.
 - `combination(value)`: Tạo các tổ hợp mảng hoặc danh sách tùy theo value.
+- `permutation` : tạo các hoàn vị -->> [1,2] =>> [12,21]
 
 arr = [1, 2, 3, 4]                          
 combinations = arr.combination(2)
@@ -148,6 +149,13 @@ end
 - `reject` : bỏ các phần tử phù hợp với điều kiện
 - `delete` : xóa bỏ key value 
 - `merge` : kết hợp hai hash với nhau
+- Khai báo Hash : {:name :"value",name:"value"} =>>>>> hash[:name],                  cách 2 : {"name"=>"value"} ==>> hash["name"]
+
+### Class
+- đọc thuộc tính : attr_reader
+- ghi đè thuộc tính : attr_writer
+- cả 2 : attr_accessor
+- hàm khởi tạo : initialize
 
 
 ### Điều Kiện
@@ -172,3 +180,26 @@ end
 console{|name| puts "#{name} is so handsome"} =>>>> boris is so handsome
 
 
+### biến
+- Biến cục bộ :  khai báo bằng một tên bắt đầu bằng chữ thường hoặc dấu gạch dưới (_). Biến cục bộ có phạm vi chỉ trong phạm vi của khối mà chúng được khai báo
+- Biến toàn cục : khai báo bằng $ và có phạm vi toàn cục
+- Biến lớp : được định nghĩa bằng cách sử dụng tiền tố @@ và chúng thuộc về toàn bộ lớp. Tất cả đối tượng của lớp sẽ chia sẻ một bản sao của biến lớp.
+- Biến hằng số : được định nghĩa bằng chữ viết hoa và không thay đổi được
+- Biến instance : được định nghĩa bằng cách sử dụng tiền tố @ và thuộc về một đối tượng cụ thể
+
+### proc và lambda
+example = proc |number| do 
+  puts number
+end
+example1 = lambda |number| do
+  puts number
+end
+example.call(12)
+example1.call(13)
+- Sư khác nhau lambda và proc là proc không phân biệt số lượng tham số còn lambda thì ngược lại
+
+
+### Quyền truy cập (private, protected, public)
+- public : Có thể truy cập tại bất cứ đâu
+- protected : Có thể truy cập từ trong class 
+- private : 
