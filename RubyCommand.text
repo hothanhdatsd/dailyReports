@@ -226,11 +226,22 @@ end
 
 File.open(file_path, "w") do |file|
 	5.times do 
-		file.puts "hello"
+		file.puts "hello" or file.write "hello"
 	end
 end
 
-- Kiểm tra sự tồn tại file : File.exist
+-- đổi tên file : rename
+- Kiểm tra sự tồn tại file : exist
+- Xóa file : delete
+- chạy file rb trong file rb : load
+- require_relative  :load file trong cùng thư mục
+
+
+
+
+
 ------------NOTE--------------------
 - trong class khi gọi tên class kèm theo phương thức thì khai báo : self.method ->>>>> sử dụng : class.method
+- super =>> kế thừa
+
 
