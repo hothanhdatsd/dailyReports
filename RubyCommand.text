@@ -37,12 +37,12 @@
 - `nil`: Đại diện cho không có giá trị hoặc không tồn tại.
 
 ### Vòng Lặp
-- `times`: Lặp một đoạn mã một số lần.
-- `upto`: Lặp từ số hiện tại đến số kết thúc.
-- `downto`: Lặp từ số hiện tại đến số kết thúc.
-- `step`: Lặp với bước nhất định.
+- `times`: Lặp một đoạn mã một số lần. 		------------ number.times
+- `upto`: Lặp từ số hiện tại đến số kết thúc.		------------ number.upto(toNumber)
+- `downto`: Lặp từ số hiện tại đến số kết thúc.	------------ number.downto(toNumber)
+- `step`: Lặp với bước nhất định.			------------ number.step(toNumber,space)
 - `while`: Vòng lặp `while`.
-- `until`: Vòng lặp `until`.
+- `until`: Vòng lặp `until`.				------------ until number 
 - `loop`: Lặp đến khi nào gặp điều kiện `break`.
 
 
@@ -64,6 +64,7 @@
 - `shift`: Xóa phần tử đầu mảng.
 - `delete_at(index)`: Xóa phần tử tại index.
 - `delete(value)`: Xóa tất cả phần tử có giá trị giống.
+- `delete_if` và `keep_if`: Xóa bỏ hoặc giữ lại tùy theo giá trị.
 - `compact`: Loại bỏ các phần tử có giá trị nil.
 - `uniq`: Loại bỏ các phần tử trùng lặp.
 - `each`: Thực hiện vòng lặp qua mảng.
@@ -71,7 +72,6 @@
 - `reverse_each`: Thực hiện vòng lặp ngược.
 - `map` và `collect`: Tạo một mảng mới chứa kết quả biến đổi.
 - `select` và `reject`: Lấy hoặc bỏ tùy theo giá trị.
-- `delete_if` và `keep_if`: Xóa bỏ hoặc giữ lại tùy theo giá trị.
 - `bsearch`: Trả về phần tử đầu tiên phù hợp với điều kiện.
 - `clear`: Dọn sạch mảng.
 - `collect(value)`: Kết hợp giá trị của mảng với value.
@@ -182,10 +182,10 @@ console{|name| puts "#{name} is so handsome"} =>>>> boris is so handsome
 
 ### biến
 - Biến cục bộ :  khai báo bằng một tên bắt đầu bằng chữ thường hoặc dấu gạch dưới (_). Biến cục bộ có phạm vi chỉ trong phạm vi của khối mà chúng được khai báo
-- Biến toàn cục : khai báo bằng $ và có phạm vi toàn cục
-- Biến lớp : được định nghĩa bằng cách sử dụng tiền tố @@ và chúng thuộc về toàn bộ lớp. Tất cả đối tượng của lớp sẽ chia sẻ một bản sao của biến lớp.
-- Biến hằng số : được định nghĩa bằng chữ viết hoa và không thay đổi được
-- Biến instance : được định nghĩa bằng cách sử dụng tiền tố @ và thuộc về một đối tượng cụ thể
+- Biến toàn cục : khai báo bằng $ và có phạm vi toàn cục  :::: $
+- Biến lớp : được định nghĩa bằng cách sử dụng tiền tố @@ và chúng thuộc về toàn bộ lớp. Tất cả đối tượng của lớp sẽ chia sẻ một bản sao của biến lớp. ::: @@
+- Biến hằng số : được định nghĩa bằng chữ viết hoa và không thay đổi được ::: UPCASE
+- Biến instance : được định nghĩa bằng cách sử dụng tiền tố @ và thuộc về một đối tượng cụ thể ::: @
 
 ### proc và lambda
 example = proc |number| do 
@@ -194,12 +194,43 @@ end
 example1 = lambda |number| do
   puts number
 end
+
 example.call(12)
 example1.call(13)
+
 - Sư khác nhau lambda và proc là proc không phân biệt số lượng tham số còn lambda thì ngược lại
 
 
 ### Quyền truy cập (private, protected, public)
 - public : Có thể truy cập tại bất cứ đâu
-- protected : Có thể truy cập từ trong class 
-- private : 
+- protected : Có thể truy cập từ trong class và class con
+- private : chỉ có thể truy cập được thông qua phương thức trong class của chính nó
+
+
+
+
+### module : 
+- khai báo các phương thức dùng chung trong module và các class có thể dùng chung các phương thức
+
+### File : 
+file_path = "test2.doc"
+- Đọc file
+
+File.open(file_path, "r") do |file|
+   file.each_line do |line|
+     puts line
+   end
+end
+
+-- ghi file 
+
+File.open(file_path, "w") do |file|
+	5.times do 
+		file.puts "hello"
+	end
+end
+
+- Kiểm tra sự tồn tại file : File.exist
+------------NOTE--------------------
+- trong class khi gọi tên class kèm theo phương thức thì khai báo : self.method ->>>>> sử dụng : class.method
+
