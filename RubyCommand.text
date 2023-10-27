@@ -156,7 +156,7 @@ end
 - ghi đè thuộc tính : attr_writer
 - cả 2 : attr_accessor
 - hàm khởi tạo : initialize
-
+- khởi tạo sử dụng các optional như : hash,value:,value
 
 ### Điều Kiện
 - `if`, `elsif`, `else`, `end`.
@@ -178,6 +178,22 @@ end
 
 
 console{|name| puts "#{name} is so handsome"} =>>>> boris is so handsome
+- rescue : xử lí ngoại lệ và đảm bảo thực hiện
+
+		def check (a,b)
+			begin
+			a + b 
+			rescue TypeError => e
+				a  = a.to_i
+				b = b.to_i
+				retry
+			ensure
+			puts "Thanh Dat dep trai"
+			end
+		end
+		p check(2,"3")
+
+
 
 
 ### biến
@@ -187,8 +203,8 @@ console{|name| puts "#{name} is so handsome"} =>>>> boris is so handsome
 - Biến hằng số : được định nghĩa bằng chữ viết hoa và không thay đổi được ::: UPCASE
 - Biến instance : được định nghĩa bằng cách sử dụng tiền tố @ và thuộc về một đối tượng cụ thể ::: @
 
-### proc và lambda
-example = proc |number| do 
+### proc và lambda	
+example = proc do |number| 
   puts number
 end
 example1 = lambda |number| do
@@ -198,11 +214,11 @@ end
 example.call(12)
 example1.call(13)
 
-- Sư khác nhau lambda và proc là proc không phân biệt số lượng tham số còn lambda thì ngược lại
+- Sư khác nhau lambda và proc là proc không phân biệt số lượng tham số còn lambda thì phân biệt
 
 
 ### Quyền truy cập (private, protected, public)
-- public : Có thể truy cập tại bất cứ đâu
+- public : Có thể truy cập tại bất cứ đâus
 - protected : Có thể truy cập từ trong class và class con
 - private : chỉ có thể truy cập được thông qua phương thức trong class của chính nó
 
@@ -211,24 +227,26 @@ example1.call(13)
 
 ### module : 
 - khai báo các phương thức dùng chung trong module và các class có thể dùng chung các phương thức
+- sử dụng : include, prepend và extend  ::: include có thể bị ghi đè, prepend thì không và extend chỉ sử dụng khi class gọi chứ đối tượng thì không
+- MODULE::MODULE::CLASS : truy cập class trong module của module
 
 ### File : 
 file_path = "test2.doc"
 - Đọc file
 
-File.open(file_path, "r") do |file|
-   file.each_line do |line|
-     puts line
-   end
-end
+		File.open(file_path, "r") do |file|
+		   file.each_line do |line|
+		     puts line
+		   end
+		end
 
 -- ghi file 
 
-File.open(file_path, "w") do |file|
-	5.times do 
-		file.puts "hello" or file.write "hello"
-	end
-end
+		File.open(file_path, "w") do |file|
+			5.times do 
+				file.puts "hello" or file.write "hello"
+			end
+		end
 
 -- đổi tên file : rename
 - Kiểm tra sự tồn tại file : exist
@@ -236,12 +254,55 @@ end
 - chạy file rb trong file rb : load
 - require_relative  :load file trong cùng thư mục
 
+ 
+### set ::: require("set")	
+- set" thường là một kiểu dữ liệu hoặc cấu trúc dữ liệu dùng để lưu trữ một tập hợp các giá trị duy nhất (không có phần tử trùng lặp).
+- thêm : add
+- Xóa : delete
 
+
+
+/// Date ::: require("date")
 
 
 
 ------------NOTE--------------------
 - trong class khi gọi tên class kèm theo phương thức thì khai báo : self.method ->>>>> sử dụng : class.method
 - super =>> kế thừa
+
+# cac cach khai bao class
+					#cach1
+					class MyCar 
+					  attr_accessor :name, :options
+
+					  def initialize(name,options)
+					    @name = name
+					    @options = options
+					  end
+					end
+					
+					#cach 2
+					class MyCar 
+					  attr_accessor :name, :options
+
+					  def initialize(name:,options:"default")
+					    @name = name
+					    @options = options
+					  end
+					end
+					motor = MyCar.new(name:"thanhdat",options:"modify")
+					#cach 3
+					
+					class MyCar 
+					  attr_accessor :name, :options
+
+					  def initialize(hash)
+					    @name = hash[:name]
+					    @options = hash[:options]
+					  end
+					end
+					motor = MyCar.new({name:"thanhdat",options:"adasd"})
+					p motor.methods
+
 
 
