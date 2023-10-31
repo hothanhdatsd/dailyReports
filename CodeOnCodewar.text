@@ -12,18 +12,16 @@
 -- Sắp xếp lại câu theo số thứ tự
 # def order(words)
 #   return "" if words.empty?
-
 #   word_list = words.split(" ")
 #   arr = Array.new(word_list.size)
-
 #   word_list.each do |word|
 #     position = word.scan(/\d/).first.to_i
 #     arr[position - 1] = word
 #   end
-
 #   result = arr.join(" ")
 #   result
 # end
+
 # def order(words)
 #   words.split.sort_by{ |word| word[/\d/] }.join(' ')
 # end
@@ -44,7 +42,6 @@
 #     value.to_i
 #   end
 #   "#{numbers.max} #{numbers.min}"
-
 # end
 
 # p high_and_low("8 3 -5 42 -1 0 0 -9 4 7 4 -4")  # Returns "42 -9"
@@ -170,20 +167,19 @@
 #   end
 #   left.concat(right)
 # end
+
 # p moveZeros([1,2,0,1,0,1,0,3,0,1])
 
 -- Xóa các phần tử lặp lại nhiều hơn max_e
 # def delete_nth(order, max_e)
 #   counts = Hash.new(0)
 #   result = []
-
 #   order.each do |value|
 #     counts[value] += 1
 #     if counts[value] <= max_e
 #       result << value
 #     end
 #   end
-
 #   result
 # end
 
@@ -195,6 +191,7 @@
 # def domain_name(url)
 #   url.match(/(?:https?:\/\/)?(?:www\d?\.)?(?<domain>[\w-]+)/)['domain']
 # end
+
 # domain_name("http://google.com")
 # domain_name("http://google.co.jp")
 # domain_name("www.xakep.ru")
@@ -212,7 +209,6 @@
 #   end
 # end
 
-
 # p open_or_senior([[45, 12],[55,21],[19, -2],[104, 20]])
 # p open_or_senior([[3, 12],[55,1],[91, -2],[54, 23]])
 # p open_or_senior([[59, 12],[55,-1],[12, -2],[12, 12]])
@@ -226,7 +222,6 @@
 #   end
 #   words = str.split.map(&:capitalize)
 #   return "#"+words.join('')
-
 # end
 
 # # p generateHashtag("")
@@ -244,6 +239,7 @@
 # def scramble(s1,s2)
 #   s2.chars.all? { |char| s1.include?(char)}
 # end
+
 # p scramble('rkqodlw',           'world'     )
 # p scramble('cedewaraaossoqqyt', 'codewars'  )
 # p scramble('katas',             'steak'     )
@@ -253,12 +249,10 @@
 -- Đêm số 0 sau giá trị giai thừa
 # def zeros(n)
 #   count = 0
-
 #   while n >= 5
 #     n = n / 5
 #     count += n
 #   end
-
 #   count
 # end
 
@@ -306,7 +300,6 @@
 -- Trả về số âm
 # def make_negative(num)
 #    num < 0 ? num : -num
-  
 # end
 
 -- Xét xem chuỗi có chưa đủ kí tự từ  a-z không
@@ -321,17 +314,13 @@
 -- Chia chuỗi số ra làm 2 và cộng từng phần tử của mỗi bên và so sánh
 # def luck_check(str)
 #   raise ArgumentError, 'Input contains illegal characters' if str.match(/[^0-9]/)
-
 #   raise ArgumentError, 'Input is empty' if str.empty?
 #   raise ArgumentError, 'Input has an odd length' if str.length.odd?
-
 #   half_length = str.length / 2
 #   left_half = str[0...half_length]
 #   right_half = str[half_length..-1]
-
 #   left_sum = left_half.chars.map(&:to_i).sum
 #   right_sum = right_half.chars.map(&:to_i).sum
-
 #   left_sum == right_sum
 # end
 
@@ -367,12 +356,11 @@
 #   r = [0, [r, 255].min].max
 #   g = [0, [g, 255].min].max
 #   b = [0, [b, 255].min].max
-
 #   # Convert the RGB values to hexadecimal and format them as a string
 #   hex = format("%02X%02X%02X", r, g, b)
-
 #   hex
 # end
+
 # puts rgb_to_hex(255, 255, 255) 
 # puts rgb_to_hex(255, 255, 300) 
 # puts rgb_to_hex(0, 0, 0)       
@@ -385,8 +373,8 @@
 #   end
 #   arr.join
 # end
-# p lcs("a", "b")
 
+# p lcs("a", "b")
 # p lcs( "132535365" , "123456789" )
 
 
@@ -442,6 +430,7 @@
 #     end
 #   end
 # end
+
 # bruce_lee = Warrior.new
 # puts bruce_lee.level        
 # puts bruce_lee.experience  
