@@ -5,15 +5,15 @@ def generate_number(number_length, count_number)
 
   arr = []
   while arr.length < number_length
-    numbers = (1..100).to_a.sample(count_number)   
-    operations = ['+', '-'].sample(count_number-1)   
+    numbers = (1..100).to_a.sample(count_number)
+    operations = ['+', '-'].sample(count_number - 1)
     expression = if count_number == 2
                    "#{numbers.first} #{operations.first} #{numbers.last}"
                  else
                    "#{numbers.first} #{operations.first} #{numbers.last} #{operations.last} #{numbers[1]}"
                  end
     result = eval(expression).to_i
-    arr << expression if result.positive? && result < 100
+    arr << expression if result.positive? && result < 100 && !arr.include?(result)
   end
   arr
 end
@@ -28,5 +28,8 @@ class TestMethodExample < Test::Unit::TestCase
     assert_equal(0, generate_number(0, 3).size)
     assert_equal(1, generate_number(1, 2).size)
     assert_equal(1, generate_number(1, 3).size)
+    assert_equal(2, generate_number(2, 2).size)
+    assert_equal(3, generate_number(3, 2).size)
+    assert_equal(3, generate_number(3, 3).size)
   end
 end
