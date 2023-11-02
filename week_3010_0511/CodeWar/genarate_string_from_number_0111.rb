@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 def generate_number(number_length, count_number)
-  return -1 if count_number != 2 && count_number != 3
+  return -1 if (count_number != 2 && count_number != 3) || number_length < 0
 
   arr = []
   while arr.length < number_length
@@ -13,7 +13,7 @@ def generate_number(number_length, count_number)
                    "#{numbers.first} #{operations.first} #{numbers.last} #{operations.last} #{numbers[1]}"
                  end
     result = eval(expression).to_i
-    arr << expression if result.positive? && result < 100 && !arr.include?(result)
+    arr << expression if result.positive? && result <= 100 && !arr.include?(result)
   end
   arr
 end
