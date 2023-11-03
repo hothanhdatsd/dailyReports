@@ -11,6 +11,8 @@ def job_position
 end
 
 def check_position(position)
+  return -1 if position.empty? 
+
   hash_position = position.map do |value|
     sorted(value)
   end
@@ -25,12 +27,11 @@ def sorted(value)
   { id: value[:id], positions: sorted_positions, sum: sum }
 end
 
-
 require 'test/unit'
 # class Test::Unit
 class TestMethodExample < Test::Unit::TestCase
   include Test::Unit::Assertions
-  def test_non_empty_strings
+  def test_with_true_result
     assert_equal([{ id: 1, positions: %w[truongphong nhanviensale] },
                   { id: 2, positions: %w[tonggiamdoc truongphong nhanviensale] }],
                  check_position([{ id: 1, positions: %w[nhanviensale truongphong] },
@@ -39,5 +40,9 @@ class TestMethodExample < Test::Unit::TestCase
                   { id: 1, positions: %w[nhanvienvp nhanviensale] }],
                  check_position([{ id: 1, positions: %w[nhanviensale nhanvienvp] },
                                  { id: 2, positions: %w[giamdoc tonggiamdoc nhanviensale] }]))
+  end
+
+  def test_with_non_input
+    assert_equal(-1, check_position([]))
   end
 end
